@@ -224,4 +224,4 @@ df.info()
 df.describe()
 ```
 # Result:
-Hence the lab activity are completed successfully.
+The Lab Assignment has completed successfully.
