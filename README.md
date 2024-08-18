@@ -4,7 +4,7 @@
 ### Department : AI&DS
 
 1. Write a Python program to select the 'name' and 'score' columns from the following DataFrame.
-
+```
        Sample DataFrame:
 
               exam_data = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 'Kevin', 'Jonas'],
@@ -12,7 +12,7 @@
                'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19],
 
               'attempts': [1, 3, 4, 3, 5, 3, 6, 1, 7, 1] } 
-
+```
  
 
 2. For the above dataframe, Write a program to select the data who's attempt is greater than 3.
@@ -20,7 +20,7 @@
 3. Write python code for indexing rows and columns based on the following conditions:
 
 Assume we have the following dataframe:
-
+```
 data = {'name': ['Alice', 'Bob', 'Charlie', 'Dave'],
 
         'age': [25, 35, 40, 28],
@@ -30,7 +30,7 @@ data = {'name': ['Alice', 'Bob', 'Charlie', 'Dave'],
         'salary': [50000, 70000, 60000, 80000]}
 
 df = pd.DataFrame(data)
-
+```
 a. Select rows where age is greater than 30:
 
 b. Select rows where name contains 'e':
@@ -190,6 +190,6 @@ print(df.head(2))
 df.info()
 
 df.describe()
-
+```
 # Result:
 Hence the lab activity are completed successfully.
