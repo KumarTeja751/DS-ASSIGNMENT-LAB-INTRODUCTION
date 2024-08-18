@@ -44,20 +44,24 @@ import pandas as pd
 df=pd.DataFrame({"a":[4,5,6],"b":[7,8,9],"c":[10,11,12]},index=[1,2,3])
 print(df)
 ```
+```
 import pandas as pd
 data=[1,2,3,4]
 df=pd.DataFrame(data)
 print(df)
+```
 ```
 import pandas as pd
 data=[["Alex",10],["Bob",20]]
 df=pd.DataFrame(data,columns=['Name','Age'])
 print(df)
 ```
+```
 import pandas as pd
 data={'cars':['BMW','VOLVO','FORD'],'passings':[3,7,2]}
 df=pd.DataFrame(data)
 print(df)
+```
 ```
 import pandas as pd
 data=[{"a":1,"b":2},{"a":5,"b":10,"c":20}]
@@ -65,12 +69,14 @@ df=pd.DataFrame(data)
 df1=pd.DataFrame(data,index=['first','second'],columns=['a','b'])
 df1
 ```
+```
 import pandas as pd
 data={'Name':['Jai','Princi','Gaurav','Anuj'],'Height':[5.1,6.2,5.1,5.2],'Qualification':['MSC','MA','MSC','BA']}
 df=pd.DataFrame(data)
 address=['Chennai','Bangalore','Ooty','Bombay']
 df['Address']=address
 df
+```
 ```
 import pandas as pd
 data={'Name':['Jai','Princi','Gaurav','Anuj'],'Height':[5.1,6.2,5.1,5.2],'Qualification':['MSC','MA','MSC','BA']}
@@ -80,6 +86,7 @@ df['Address']=address
 del df['Address']
 df
 ```
+```
 import pandas as pd
 data={'Name':['Jai','Princi','Gaurav','Anuj'],'Height':[5.1,6.2,5.1,5.2],'Qualification':['MSC','MA','MSC','BA']}
 df=pd.DataFrame(data)
@@ -87,6 +94,7 @@ address=['Chennai','Bangalore','Ooty','Bombay']
 df['Address']=address
 df.drop(['Address'],axis=1,inplace=True)
 df
+```
 ```
 import pandas as pd
 data={'Name':['Jai','Princi','Gaurav','Anuj'],'Height':[5.1,6.2,5.1,5.2],'Qualification':['MSC','MA','MSC','BA']}
@@ -97,6 +105,7 @@ df.drop(['Address'],axis=1,inplace=True)
 df.pop('Height')
 df
 ```
+```
 import pandas as pd
 data={'Name':['Jai','Princi','Gaurav','Anuj'],'Age':[27,24,56,45],'Address':['Chennai','Bangalore','Ooty','Bombay'],'Qualification':['MSC','MA','MSC','BA']}
 df=pd.DataFrame(data)
@@ -104,25 +113,30 @@ df
 df.rename(columns={'Address':'place'},inplace=True)
 df
 ```
+```
 import pandas as pd
 df=pd.DataFrame([[1,2],[3,4]],columns=['a','b'])
 df2=pd.DataFrame([[5,6],[7,8]],columns=['a','b'])
 df=pd.concat([df,df2])
 df
 ```
+```
 data={'Name':['Jai','Princi','Gaurav','Anuj'],'Age':[27,24,56,45],'Address':['Chennai','Bangalore','Ooty','Bombay'],'Qualification':['MSC','MA','MSC','BA']}
 df=pd.DataFrame(data)
 df.drop(2,axis=0,inplace=True)
 df
+```
 ```
 data={'Name':['Jai','Princi','Gaurav','Anuj'],'Age':[27,24,56,45],'Address':['Chennai','Bangalore','Ooty','Bombay'],'Qualification':['MSC','MA','MSC','BA']}
 df=pd.DataFrame(data)
 df=df['Name']
 df
 ```
+```
 data={'Name':['Jai','Princi','Gaurav','Anuj'],'Age':[27,24,56,45],'Address':['Chennai','Bangalore','Ooty','Bombay'],'Qualification':['MSC','MA','MSC','BA']}
 df=pd.DataFrame(data)
 print(df[['Name','Qualification']])
+```
 ```
 data={'Name':['Jai','Ajey','Gaurav','Anuj'],'Age':[27,24,56,45],'Address':['Chennai','Bangalore','Ooty','Bombay'],'Qualification':['MSC','MA','MSC','BA']}
 df=pd.DataFrame(data)
@@ -130,25 +144,30 @@ df.filter(items=['Name','Age'])
 df.filter(like='ame')
 df.filter(regex='a|e',axis=1)
 ```
+```
 data={'Name':['Jai','Ajey','Gaurav','Anuj'],'Age':[27,24,27,45],'Address':['Chennai','Bangalore','Ooty','Bombay'],'Qualification':['MSC','MA','MSC','BA']}
 df=pd.DataFrame(data)
 df=df.drop_duplicates(subset=(['Age']))
 df
+```
 ```
 data={'Name':['Jai','Ajey','Jai','Anuj'],'Age':[27,24,27,45],'Address':['Chennai','Bangalore','Ooty','Bombay'],'Qualification':['MSC','MA','MSC','BA']}
 df=pd.DataFrame(data)
 df=df.drop_duplicates(subset=(['Name','Age']),keep='last')
 df
 ```
+```
 data={'Name':['Jai','Ajey','Gaurav','Anuj'],'Age':[27,24,27,45],'Address':['Chennai','Bangalore','Ooty','Bombay'],'Qualification':['MSC','MA','MSC','BA']}
 df=pd.DataFrame(data)
 dfs=df.sample(n=2)
 dfs
 ```
+```
 data={'Name':['Jai','Ajey','Gaurav','Anuj'],'Age':[27,24,27,45],'Address':['Chennai','Bangalore','Ooty','Bombay'],'Qualification':['MSC','MA','MSC','BA']}
 df=pd.DataFrame(data)
 df_sample=df.sample(frac=0.5)
 df_sample
+```
 ```
 import pandas as pd
 data={'name':['Alice','Bob','Charlie','David'],'age':[25,30,35,40],'salary':[20000,45000,23000,67000],'gender':['F','M','F','M']}
@@ -156,40 +175,54 @@ df=pd.DataFrame(data)
 top=df.nlargest(1,columns='salary') #(nsmallest) for smaller salary
 print(top)
 ```
+```
 a=df.query('age>30')
 print(a)
+```
 ```
 a=df.query('name.str.contains("a") and salary>40000')
 print(a)
 ```
+```
 a=df.query(' gender == ["F","M"] and age>30')
 a
+```
 ```
 a=df.loc[:,'age']
 a
 ```
+```
 b=df.iloc[:,0]
 b
+```
 ```
 a=df.loc[:,['name','age']]
 a
 ```
+```
 a=df[df['age']>30]
 a
+```
 ```
 a=df[(df['gender']== 'F') & (df['age']>30)]
 a
 ```
+```
 a=df[df['name'].str.startswith(('A','C'))]
 a
 ```
+```
 print(df.tail(2)) #head for first to last
+```
 ```
 print(df.head(2))
 ```
+```
 df.info()
 ```
+```
 df.describe()
+```
 ```
 # Result:
 Hence the lab activity are completed successfully.
